@@ -1,0 +1,150 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body.milestones-page {
+    background: url("images/milestones.png") no-repeat center center/cover;
+    background-color: red; /* Fallback color */
+}
+
+/* Sticky Navbar with blurred background */
+.navbar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.3); /* Slight transparency */
+    padding: 10px 20px;
+    z-index: 1000;
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    box-shadow: none; /* Remove shadow */
+    border: none;
+}
+
+/* Navbar contents */
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 25px; /* Increased space for left items */
+}
+
+/* Center the logo properly within the navbar */
+.navbar-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; /* Allow the center to grow and take available space */
+    padding-top: 15px;  /* Padding above the logo */
+    padding-bottom: 15px; /* Padding below the logo */
+}
+
+/* Right Items (Social Icons) */
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.navbar a {
+    color: white;
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif; /* Use Roboto for page links */
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+    text-decoration: none; /* Remove underline */
+}
+
+.navbar a:hover {
+    color: #1db954; /* Highlight links on hover */
+}
+
+/* Styling for the active link */
+.navbar a.active {
+    text-decoration: underline;
+    font-weight: bold; /* Optional, to make the active page stand out more */
+}
+
+/* Font Awesome icons for social links */
+.navbar-right a {
+    color: white;
+    font-size: 1.8rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-right a:hover {
+    color: #00ff4c; /* Highlight on hover */
+}
+
+/* Logo */
+.logo {
+    max-height: 60px;
+}
+
+/* Milestones Section */
+.milestones-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.milestones-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-family: 'Arial Black', sans-serif;
+    color: #1db954;
+}
+
+/* Milestones Container */
+.milestones-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 Columns */
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Individual Milestone Item */
+.milestone-item {
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid #1db954;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.milestone-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.9);
+}
+
+.milestone-item h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-family: 'Arial Black', sans-serif;
+    color: white;
+}
+
+.milestone-date {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #cccccc;
+}
+
+.milestone-description {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #dddddd;
+}
+
+.milestone-image {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}

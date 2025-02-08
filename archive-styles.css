@@ -1,0 +1,150 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    scrollbar-width: none;
+}
+
+/* Background for the archive page */
+body.archive-page {
+    background: url("images/archive_image.png") no-repeat center center/cover;
+    background-attachment: fixed; /* Make the background static */
+    color: white;
+    overflow-y: scroll; /* Enable vertical scrolling */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+}
+
+body.archive-page::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari, and Edge */
+}
+
+/* Sticky Navbar with blurred background */
+.navbar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.3); /* Slight transparency */
+    padding: 10px 20px;
+    z-index: 1000;
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    box-shadow: none; /* Remove shadow */
+    border: none;
+}
+
+/* Navbar contents */
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 25px; /* Increased space for left items */
+}
+
+/* Center the logo properly within the navbar */
+.navbar-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; /* Allow the center to grow and take available space */
+    padding-top: 15px;  /* Padding above the logo */
+    padding-bottom: 15px; /* Padding below the logo */
+}
+
+/* Right Items (Social Icons) */
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.navbar a {
+    color: white;
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif; /* Use Roboto for page links */
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+    text-decoration: none; /* Remove underline */
+}
+
+.navbar a:hover {
+    color: #1db954; /* Highlight links on hover */
+}
+
+/* Styling for the active link */
+.navbar a.active {
+    text-decoration: underline;
+    font-weight: bold; /* Optional, to make the active page stand out more */
+}
+
+/* Font Awesome icons for social links */
+.navbar-right a {
+    color: white;
+    font-size: 1.8rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-right a:hover {
+    color: #00ff4c; /* Highlight on hover */
+}
+
+/* Logo */
+.logo {
+    max-height: 60px;
+}
+
+/* Archive Section */
+.archive-section {
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.archive-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.release-item {
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid #1db954;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.release-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.9);
+}
+
+.release-cover {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+.release-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-family: 'Arial Black', sans-serif;
+}
+
+.release-info p {
+    font-size: 1.1rem;
+    margin: 5px 0;
+    color: #cccccc;
+}
+
+iframe {
+    margin-top: 10px;
+}
+

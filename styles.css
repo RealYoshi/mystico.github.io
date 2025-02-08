@@ -1,0 +1,432 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    height: 100%; /* Ensure the body and html take full height */
+    overflow: hidden; /* Prevent default scrollbar */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+    overflow-y: scroll; /* Allow vertical scrolling */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+/* For Webkit browsers (Chrome, Edge, Safari) */
+body::-webkit-scrollbar {
+    display: none; /* Completely hide the scrollbar */
+}
+
+/* Sticky Navbar with blurred background */
+.navbar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.3); /* Slight transparency */
+    padding: 10px 20px;
+    z-index: 1000;
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    box-shadow: none; /* Remove shadow */
+    border: none;
+}
+
+/* Navbar contents */
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 25px; /* Increased space for left items */
+}
+
+/* Center the logo properly within the navbar */
+.navbar-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; /* Allow the center to grow and take available space */
+    padding-top: 15px;  /* Padding above the logo */
+    padding-bottom: 15px; /* Padding below the logo */
+}
+
+/* Right Items (Social Icons) */
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.navbar a {
+    color: white;
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif; /* Use Roboto for page links */
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+    text-decoration: none; /* Remove underline */
+}
+
+.navbar a:hover {
+    color: #1db954; /* Highlight links on hover */
+}
+
+/* Styling for the active link */
+.navbar a.active {
+    text-decoration: underline;
+    font-weight: bold; /* Optional, to make the active page stand out more */
+}
+
+/* Font Awesome icons for social links */
+.navbar-right a {
+    color: white;
+    font-size: 1.8rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-right a:hover {
+    color: #00ff4c; /* Highlight on hover */
+}
+
+/* Logo */
+.logo {
+    max-height: 60px;
+}
+
+/* Scrolling Text with Proper Gradient and Centering */
+.release-alert {
+    position: relative;
+    background-color: black; /* Black background */
+    overflow: hidden; /* Prevent content overflow */
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    height: 100px; /* Height of the release alert */
+}
+
+.release-alert .scrolling-text {
+    font-family: 'Arial Black', sans-serif; /* Bold and eye-catching font */
+    font-size: 3rem; /* Larger text size for emphasis */
+    font-weight: bold;
+    background: linear-gradient(90deg, #c300ff, #00ffaa); /* Proper gradient */
+    background-clip: text; /* Standard background-clip for all browsers */
+    -webkit-background-clip: text; /* WebKit browsers */
+    -webkit-text-fill-color: transparent; /* Transparent text for gradient effect */
+    white-space: nowrap; /* Prevent line breaks */
+    animation: scroll-left 20s linear infinite; /* Smooth continuous scrolling */
+    text-align: center; /* Center-align text within its container */
+    position: absolute; /* Ensures it's positioned relative to the .release-alert */
+}
+
+/* Adjusting the image of the album cover */
+.release-alert img {
+    height: 100px; /* Album cover size */
+    border-radius: 10px; /* Rounded edges */
+    margin-right: 15px; /* Space between image and text */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for the album cover */
+    vertical-align: middle;
+}
+
+/* Smooth Scrolling Animation */
+@keyframes scroll-left {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("images/Logo.png") no-repeat center center/cover;
+    filter: brightness(0.85); /* Dim the background for contrast */
+    animation: pulse 3s infinite alternate;
+}
+
+@keyframes pulse {
+    0% { filter: brightness(0.9); }
+    100% { filter: brightness(1.2); }
+}
+
+/* Hero Content */
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+    width: 90%;
+    max-width: 1200px;
+}
+
+.text-content {
+    color: white;
+    max-width: 60%;
+}
+
+.text-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-family: 'Arial Black', sans-serif;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.album-cover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.album-cover img {
+    max-width: 350px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+    margin-bottom: 15px;
+}
+
+/* Stream Button */
+.stream-button {
+    padding: 10px 20px;
+    color: #1db954;
+    background-color: transparent;
+    border: 2px solid #1db954;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.stream-button:hover {
+    background-color: #1db954;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Enhanced Popup Styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9); /* Darker background for better contrast */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    backdrop-filter: blur(8px); /* Adds a blurred effect to the background */
+}
+
+.popup.show {
+    display: flex;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.popup-content {
+    background: linear-gradient(145deg, #121212, #222222); /* Subtle gradient for depth */
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    border: 2px solid #1db954; /* Green accent border */
+    animation: popup-fade-in 0.5s ease; /* Subtle entrance animation */
+}
+
+.popup-content h2 {
+    margin-bottom: 20px;
+    color: #1db954; /* Green title color */
+    font-size: 2rem;
+    font-family: 'Arial Black', sans-serif;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.popup-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.popup-content ul li {
+    margin: 10px 0;
+}
+
+.popup-content ul li a {
+    color: #1db954;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s;
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid #1db954;
+}
+
+.popup-content ul li a:hover {
+    background-color: #1db954;
+    color: white;
+    transform: scale(1.1); /* Subtle hover effect */
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.8rem;
+    color: #1db954; /* Green close button */
+    cursor: pointer;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.close-btn:hover {
+    transform: rotate(90deg); /* Fun rotation on hover */
+    color: #ffffff; /* Changes color to white */
+}
+
+/* Entrance Animation */
+@keyframes popup-fade-in {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Content Section */
+.content {
+    padding: 20px;
+    color: white;
+    text-align: center;
+    background: linear-gradient(180deg, #121212, #1c1c1c);
+    min-height: 200vh; /* Extend content area */
+    margin-top: 100px; /* Push content down to avoid overlap with the sticky navbar */
+}
+
+/* Archive Section */
+.collection-section {
+    position: relative;
+    background: url("images/archive_image.png") no-repeat center center/cover; /* Background image */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    text-align: center; /* Center-align text */
+    color: white;
+    padding: 20px; /* Add some padding for smaller screens */
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.8); /* Add a shadow for better contrast */
+}
+
+.collection-content {
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent black overlay */
+    padding: 30px;
+    border-radius: 15px; /* Smooth rounded corners */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8); /* Subtle shadow */
+    max-width: 600px; /* Set a maximum width for the content */
+    width: 90%; /* Responsive width for smaller screens */
+}
+
+.collection-content h2 {
+    font-size: 2.5rem; /* Headline size */
+    margin-bottom: 20px;
+    font-family: 'Arial Black', sans-serif; /* Bold and standout font */
+    text-transform: uppercase; /* Make the text uppercase for emphasis */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Subtle shadow for better readability */
+}
+
+.collection-content button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: #1db954; /* Spotify green */
+    background-color: transparent;
+    border: 2px solid #1db954;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+    font-family: 'Arial', sans-serif; /* Match font style */
+}
+
+.collection-content button:hover {
+    background-color: #1db954; /* Button fills with green on hover */
+    color: white; /* White text for contrast */
+    transform: scale(1.05); /* Slightly enlarge button */
+}
+
+/* Milestones Section */
+.milestones-section {
+    position: relative;
+    background: url("images/archive_background.png") no-repeat center center/cover; /* Background image */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    text-align: center; /* Center-align text */
+    color: white;
+    padding: 20px; /* Add padding for smaller screens */
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.8); /* Add a shadow for better contrast */
+}
+
+.milestones-section .overlay {
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black overlay */
+    padding: 30px;
+    border-radius: 15px; /* Smooth rounded corners */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8); /* Subtle shadow */
+    max-width: 600px; /* Set a maximum width for the content */
+    width: 90%; /* Responsive width for smaller screens */
+}
+
+.milestones-section .overlay h2 {
+    font-size: 2.5rem; /* Headline size */
+    margin-bottom: 20px;
+    font-family: 'Arial Black', sans-serif; /* Bold and standout font */
+    text-transform: uppercase; /* Make the text uppercase for emphasis */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Subtle shadow for better readability */
+}
+
+.milestones-section .overlay button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: white; /* Spotify green */
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+    font-family: 'Arial', sans-serif; /* Match font style */
+}
+
+.milestones-section .overlay button:hover {
+    background-color: white; /* Button fills with green on hover */
+    color: black; /* White text for contrast */
+    transform: scale(1.05); /* Slightly enlarge button */
+}
