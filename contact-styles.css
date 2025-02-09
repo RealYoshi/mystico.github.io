@@ -1,0 +1,168 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+
+body.contact-page {
+    background: url("images/PSYCHOSIS_cover.jpg") no-repeat center center/cover;
+    background-attachment: fixed;
+    color: white;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+body.contact-page::-webkit-scrollbar {
+    display: none;
+}
+
+/* Navbar Styles */
+.navbar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px 20px;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    box-shadow: none;
+    border: none;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.navbar-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.navbar a {
+    color: white;
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: #1db954;
+}
+
+.navbar a.active {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.navbar-right a {
+    color: white;
+    font-size: 1.8rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-right a:hover {
+    color: #00ff4c;
+}
+
+.logo {
+    max-height: 60px;
+}
+
+/* Contact Page Styles */
+.contact-container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    margin: 100px auto;
+}
+
+.contact-container h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #1db954;
+}
+
+.contact-container p {
+    font-size: 1.2em;
+    color: #cccccc;
+    margin-bottom: 20px;
+}
+
+.email-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#email {
+    font-size: 1.1em;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 15px;
+    border-radius: 8px;
+    word-break: break-word;
+    border: 2px solid #1db954;
+}
+
+button {
+    background-color: #1db954;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #00ff4c;
+    transform: scale(1.05);
+}
+
+.image-section {
+    margin-top: 20px;
+}
+
+.contact-image {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width: 480px) {
+    .contact-container {
+        padding: 15px 20px;
+    }
+
+    button {
+        width: 100%;
+    }
+}

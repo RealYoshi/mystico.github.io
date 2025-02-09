@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="contact-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="contact-page">
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="navbar-left">
+            <a href="index.html" class="navbar-link">Home</a>
+            <a href="archive.html" class="navbar-link">Archive</a>
+            <a href="milestones.html" class="navbar-link">Milestones</a>
+            <a href="contact.html" class="navbar-link active">Contact</a>
+            <a href="store.html" class="navbar-link">Store</a>                
+        </div>
+        <div class="navbar-center">
+            <img src="images/LogoTextRBCropped.png" alt="Mystico Logo" class="logo">
+        </div>
+        <div class="navbar-right">
+            <a href="https://www.instagram.com/real_mystico/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@RealMystico" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://open.spotify.com/artist/7wIB5XPOZNa4bDlM2FhMTF" target="_blank"><i class="fab fa-spotify"></i></a>
+            <a href="https://www.deezer.com/nl/artist/300137951" target="_blank"><i class="fab fa-deezer"></i></a>
+            <a href="https://music.amazon.co.uk/artists/B0DV9BBYJN/mystico" target="_blank"><i class="fab fa-amazon"></i></a>
+            <a href="https://music.apple.com/us/artist/mystico/1746881391" target="_blank"><i class="fab fa-itunes"></i></a>
+            <a href="https://discord.com" target="_blank"><i class="fab fa-discord"></i></a>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="contact-container">
+        <h1>Contact Us</h1>
+        <p>For inquiries, reach out at:</p>
+        <div class="email-section">
+            <p id="email">Mystico_Music@protonmail.com</p>
+            <button onclick="copyEmail()">
+                <i class="fas fa-copy"></i> Copy Email
+            </button>
+            <a href="mailto:Mystico_Music@protonmail.com" style="text-decoration: none;">
+                <button>
+                    <i class="fas fa-envelope"></i> Send Email
+                </button>
+            </a>
+        </div>
+        <div class="image-section">
+            <img src="images/PSYCHOSIS_cover.jpg" alt="Mystico Cover" class="contact-image">
+        </div>
+    </div>
+
+    <script>
+        function copyEmail() {
+            const emailText = document.getElementById('email').textContent;
+            navigator.clipboard.writeText(emailText).then(() => {
+                alert('Email copied to clipboard!');
+            }, () => {
+                alert('Failed to copy email.');
+            });
+        }
+    </script>
+</body>
+</html>

@@ -205,9 +205,9 @@ body::-webkit-scrollbar {
 /* Stream Button */
 .stream-button {
     padding: 10px 20px;
-    color: #1db954;
+    color: rgb(120, 3, 131);
     background-color: transparent;
-    border: 2px solid #1db954;
+    border: 2px solid rgb(120, 3, 131);
     border-radius: 8px;
     cursor: pointer;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -215,7 +215,7 @@ body::-webkit-scrollbar {
 }
 
 .stream-button:hover {
-    background-color: #1db954;
+    background-color: rgb(120, 3, 131);
     color: white;
     transform: scale(1.05);
 }
@@ -252,13 +252,13 @@ body::-webkit-scrollbar {
     text-align: center;
     position: relative;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
-    border: 2px solid #1db954; /* Green accent border */
+    border: 2px solid rgb(120, 3, 131); /* Green accent border */
     animation: popup-fade-in 0.5s ease; /* Subtle entrance animation */
 }
 
 .popup-content h2 {
     margin-bottom: 20px;
-    color: #1db954; /* Green title color */
+    color:rgb(120, 3, 131); /* Green title color */
     font-size: 2rem;
     font-family: 'Arial Black', sans-serif;
     text-transform: uppercase;
@@ -276,7 +276,7 @@ body::-webkit-scrollbar {
 }
 
 .popup-content ul li a {
-    color: #1db954;
+    color: rgb(120, 3, 131);
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: bold;
@@ -285,11 +285,11 @@ body::-webkit-scrollbar {
     border-radius: 8px;
     transition: background-color 0.3s, transform 0.2s;
     background: rgba(0, 0, 0, 0.8);
-    border: 2px solid #1db954;
+    border: 2px solid rgb(120, 3, 131);
 }
 
 .popup-content ul li a:hover {
-    background-color: #1db954;
+    background-color: rgb(120, 3, 131);
     color: white;
     transform: scale(1.1); /* Subtle hover effect */
 }
@@ -299,7 +299,7 @@ body::-webkit-scrollbar {
     top: 10px;
     right: 10px;
     font-size: 1.8rem;
-    color: #1db954; /* Green close button */
+    color: rgb(120, 3, 131); /* Green close button */
     cursor: pointer;
     transition: transform 0.3s, color 0.3s;
 }
@@ -429,4 +429,106 @@ body::-webkit-scrollbar {
     background-color: white; /* Button fills with green on hover */
     color: black; /* White text for contrast */
     transform: scale(1.05); /* Slightly enlarge button */
+}
+
+/* Contact Section */
+.contact-section {
+    position: relative;
+    background: url("images/PSYCHOSIS_cover.jpg") no-repeat center center/cover; /* Use PSYCHOSIS cover as background */
+    height: 100vh; /* Adjust to fit your design */
+    display: flex;
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
+    text-align: center;
+    color: white;
+    padding: 20px;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.8); /* Subtle shadow for better contrast */
+}
+
+.contact-content {
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay for text */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
+    max-width: 600px;
+    width: 90%; /* Responsive width */
+}
+
+.contact-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-family: 'Arial Black', sans-serif;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.contact-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.contact-content button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color:rgb(255, 166, 0); /* Spotify green */
+    background-color: transparent;
+    border: 2px solid rgb(255, 166, 0);
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+    font-family: 'Arial', sans-serif;
+}
+
+.contact-content button:hover {
+    background-color:rgb(255, 166, 0);
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Social Media Section */
+.socials-section {
+    background: url("images/DEADLOCK_cover.jpg") no-repeat center center/cover;
+    height: 100vh; /* Adjust height as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.8);
+}
+
+.socials-content {
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
+    max-width: 600px;
+    width: 90%;
+}
+
+.socials-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-family: 'Arial Black', sans-serif;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 2.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color:rgb(255, 0, 128); /* Green hover color */
 }
