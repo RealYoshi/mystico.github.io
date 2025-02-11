@@ -8,7 +8,7 @@ body, html {
 
 body.milestones-page {
     background: url("images/milestones.png") no-repeat center center/cover;
-    background-color: red; /* Fallback color */
+    background-color: red;
 }
 
 /* Sticky Navbar with blurred background */
@@ -18,11 +18,11 @@ body.milestones-page {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(0, 0, 0, 0.3); /* Slight transparency */
+    background: rgba(0, 0, 0, 0.3);
     padding: 10px 20px;
     z-index: 1000;
-    backdrop-filter: blur(10px); /* Apply blur effect */
-    box-shadow: none; /* Remove shadow */
+    backdrop-filter: blur(10px); 
+    box-shadow: none; 
     border: none;
 }
 
@@ -30,7 +30,7 @@ body.milestones-page {
 .navbar-left {
     display: flex;
     align-items: center;
-    gap: 25px; /* Increased space for left items */
+    gap: 25px; 
 }
 
 /* Center the logo properly within the navbar */
@@ -38,9 +38,9 @@ body.milestones-page {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-grow: 1; /* Allow the center to grow and take available space */
-    padding-top: 15px;  /* Padding above the logo */
-    padding-bottom: 15px; /* Padding below the logo */
+    flex-grow: 1; 
+    padding-top: 15px;  
+    padding-bottom: 15px; 
 }
 
 /* Right Items (Social Icons) */
@@ -53,19 +53,19 @@ body.milestones-page {
 .navbar a {
     color: white;
     font-size: 1.5rem;
-    font-family: 'Roboto', sans-serif; /* Use Roboto for page links */
+    font-family: 'Roboto', sans-serif;
     transition: color 0.3s ease, text-decoration 0.3s ease;
-    text-decoration: none; /* Remove underline */
+    text-decoration: none; 
 }
 
 .navbar a:hover {
-    color: #1db954; /* Highlight links on hover */
+    color: #1db954; 
 }
 
 /* Styling for the active link */
 .navbar a.active {
     text-decoration: underline;
-    font-weight: bold; /* Optional, to make the active page stand out more */
+    font-weight: bold; 
 }
 
 /* Font Awesome icons for social links */
@@ -76,7 +76,7 @@ body.milestones-page {
 }
 
 .navbar-right a:hover {
-    color: #00ff4c; /* Highlight on hover */
+    color: #00ff4c; 
 }
 
 /* Logo */
@@ -100,7 +100,7 @@ body.milestones-page {
 /* Milestones Container */
 .milestones-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 Columns */
+    grid-template-columns: repeat(3, 1fr); 
     gap: 20px;
     width: 90%;
     max-width: 1200px;
