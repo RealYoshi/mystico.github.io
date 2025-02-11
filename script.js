@@ -4,7 +4,7 @@ function openPopup() {
     popup.style.display = 'flex';
     setTimeout(() => {
       popup.classList.add('show');
-    }, 10); // Allow time for the display to apply
+    }, 10);
   }
   
   // Close the popup with animation
@@ -13,7 +13,7 @@ function openPopup() {
     popup.classList.remove('show');
     setTimeout(() => {
       popup.style.display = 'none';
-    }, 400); // Match the animation duration
+    }, 400);
   }
   
   // Close the popup when clicking outside the content
@@ -34,9 +34,9 @@ document.querySelectorAll('.navbar a').forEach(link => {
     
     // Check if the current page matches the link's href
     if (currentPath === linkPath) {
-        link.classList.add('active'); // Add the "active" class to the matching link
+        link.classList.add('active');
     } else {
-        link.classList.remove('active'); // Ensure others are not marked active
+        link.classList.remove('active'); 
     }
 });
 
@@ -62,7 +62,7 @@ window.onload = function() {
 
 // JavaScript to add active class based on the current page
 document.addEventListener("DOMContentLoaded", function() {
-    const links = document.querySelectorAll('.navbar-link'); // Select all links with navbar-link class
+    const links = document.querySelectorAll('.navbar-link'); 
 
     // Get the current page's filename (index.html or archive.html)
     const currentPage = window.location.pathname.split("/").pop();
@@ -71,9 +71,9 @@ document.addEventListener("DOMContentLoaded", function() {
     links.forEach(link => {
         // Check if the link's href matches the current page
         if (link.getAttribute("href") === currentPage) {
-            link.classList.add("active");  // Add the 'active' class to the current link
+            link.classList.add("active");
         } else {
-            link.classList.remove("active");  // Remove the 'active' class from others
+            link.classList.remove("active");  
         }
     });
 });
