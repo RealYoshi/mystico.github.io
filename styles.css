@@ -245,7 +245,7 @@ body::-webkit-scrollbar {
 }
 
 .popup-content {
-    background: linear-gradient(145deg, #4d4646, #332e2e); 
+    background: linear-gradient(145deg, #121212, #222222); 
     padding: 30px;
     border-radius: 15px;
     max-width: 500px;
