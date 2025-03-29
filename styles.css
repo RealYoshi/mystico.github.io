@@ -245,14 +245,14 @@ body::-webkit-scrollbar {
 }
 
 .popup-content {
-    background: linear-gradient(145deg, #00A8FF, #005DAB); 
+    background: linear-gradient(145deg, #4d4646, #332e2e); 
     padding: 30px;
     border-radius: 15px;
     max-width: 500px;
     text-align: center;
     position: relative;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
-    border: 2px solid rgb(120, 3, 131); 
+    border: 2px solid #00A8FF; 
     animation: popup-fade-in 0.5s ease;
 }
 
