@@ -207,7 +207,7 @@ body::-webkit-scrollbar {
     padding: 10px 20px;
     color: #00A8FF;
     background-color: transparent;
-    border: 2px solid rgb(120, 3, 131);
+    border: 2px solid #00A8FF;
     border-radius: 8px;
     cursor: pointer;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -245,7 +245,7 @@ body::-webkit-scrollbar {
 }
 
 .popup-content {
-    background: linear-gradient(145deg, #121212, #222222); 
+    background: linear-gradient(145deg, #00A8FF, #005DAB); 
     padding: 30px;
     border-radius: 15px;
     max-width: 500px;
@@ -258,7 +258,7 @@ body::-webkit-scrollbar {
 
 .popup-content h2 {
     margin-bottom: 20px;
-    color:rgb(120, 3, 131); 
+    color: #00A8FF; 
     font-size: 2rem;
     font-family: 'Arial Black', sans-serif;
     text-transform: uppercase;
