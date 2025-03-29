@@ -215,7 +215,7 @@ body::-webkit-scrollbar {
 }
 
 .stream-button:hover {
-    background-color: #00A8FF);
+    background-color: #00A8FF;
     color: white;
     transform: scale(1.05);
 }
